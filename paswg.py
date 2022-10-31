@@ -6,7 +6,7 @@ def simple_generate(*args):
     res = [random.choice(smb) for i in range(0,3)]
     return ''.join(res)
 
-def password(leng = 8):
+def get_password(leng = 8):
     smb = 'abcdefghijklmnopqrstuvwxyz0123456789!()$%?'
     if leng > 64:
         leng = 64
@@ -15,9 +15,7 @@ def password(leng = 8):
 def password_secure(pasw): ...
 
 
-
-n = mega_password(64)
-print(n)
-
-
-    
+if __name__ == '__main__':
+    fst = simple_generate()
+    snd = get_password(999)
+    print(f'simple_generate = {fst} \nget_password = {snd}')
